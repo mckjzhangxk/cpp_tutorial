@@ -1,0 +1,2 @@
+#define MAJOR @pvc_VERSION_MAJOR@
+#define MINOR @pvc_VERSION_MINOR@

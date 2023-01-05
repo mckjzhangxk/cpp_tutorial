@@ -1,6 +1,9 @@
 * 重要的命令： cmake是一个输入，输出的函数。
 ```
     cmake [options] -S <path-to-source> -B <path-to-build>
+
+    -D${OptionName}=OFF 
+    eg: cmake -S . -B build -DGLFW_BUILD_DOCS=OFF
 ```
 
 * [基本的结构CMakeLists.txt](basic/CMakeLists.txt)
@@ -42,4 +45,9 @@ target_link_directories(${PROJECT_NAME} PRIVATE /usr/local/lib)
 # 链接库文件
 target_link_libraries(${PROJECT_NAME}   mymath)
 
+```
+
+变量
+```
+    list(APPEND LIBS  opengl pthread glfw)
 ```

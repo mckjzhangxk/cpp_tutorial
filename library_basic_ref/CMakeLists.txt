@@ -11,6 +11,9 @@ add_executable(${PROJECT_NAME} main.cpp)
 
 # 头文件目录
 include_directories(/usr/local/include)
+# 或者使用
+# target_include_directories(${PROJECT_NAME} PUBLIC /usr/local/include)
+
 # 库文件目录
 target_link_directories(${PROJECT_NAME} PRIVATE /usr/local/lib)
 # 链接库文件

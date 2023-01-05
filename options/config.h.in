@@ -1,0 +1,2 @@
+//这一句很重要,通过 -DUSE_ADDER=ON传入
+#cmakedefine USE_ADDER
