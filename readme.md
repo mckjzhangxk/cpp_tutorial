@@ -45,8 +45,34 @@ target_link_directories(${PROJECT_NAME} PRIVATE /usr/local/lib)
 # 链接库文件
 target_link_libraries(${PROJECT_NAME}   mymath)
 
+
 ```
 
+[预处理文件](project_version/CMakeLists.txt)
+```
+#configure_file 是把cmake的参数,属性，传递给C 文件
+
+configure_file(config.h.in config.h)
+
+
+#define MAJOR @pvc_VERSION_MAJOR@
+#define MINOR @pvc_VERSION_MINOR@
+```
+
+[安装](https://cmake.org/cmake/help/v3.10/command/install.html#installing-targets)
+```
+
+#安装文件夹
+install(DIRECTORY dirs... DESTINATION <dir>)
+install(DIRECTORY include DESTINATION /usr/local/include/abc)
+
+#安装target
+install(TARGETS targets DESTINATION <dir>)
+
+install(TARGETS helloworld  DESTINATION /bin/)
+install(TARGETS mylib LIBRARY DESTINATION /usr/local/lib)
+
+```
 变量
 ```
     list(APPEND LIBS  opengl pthread glfw)
