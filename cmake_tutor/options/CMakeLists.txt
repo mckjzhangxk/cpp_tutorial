@@ -4,6 +4,16 @@ project(optionDemo VERSION 2.5)
 
 
 
+#尝试 cmake .. -DCMAKE_BUILD_TYPE=Release
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug)
+endif()
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON) #把编译命令导出到 compile_commands.json
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -myFlag")
+
+#尝试 cmake .. -DCMAKE_BUILD_TYPE=Release
+set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 
 # cmake中设置的选项，外部使用 -DUSE_ADDER=ON/OFF
 option(USE_ADDER "使用adder函数库" ON)

@@ -23,11 +23,12 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ipb_arithmetic)
 # 安装头文件
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/include 
        DESTINATION ${CMAKE_INSTALL_PREFIX})
-# # 安装lib
+# 安装lib
 install(TARGETS ipb_arithmetic 
         LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
        )
-
+# 安装可执行程序
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
 message("安装目录：${CMAKE_INSTALL_PREFIX}")
 

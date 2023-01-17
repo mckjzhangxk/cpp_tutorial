@@ -1,11 +1,5 @@
-#include"add.h"
+#include "add.h"
 
-int mymath::add(int a,int b)
-{
-    return a+b;
-}
+int mymath::add(int a, int b) { return a + b; }
 
-float mymath::add(float a,float b)
-{
-    return a+b;
-}
+float mymath::add(float a, float b) { return a + b; }
